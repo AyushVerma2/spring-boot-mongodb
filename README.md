@@ -58,6 +58,8 @@ ps aux | grep -v grep | grep mongod
 To begin using MongoDB, connect a mongo shell to the running instance. From a new terminal, issue the following:
 mongo
 
+To chekc which bd is sued , open mongo terminal by typing mongo , and then >db .
+- to create new db suer <db_name>
 Link:
 https://docs.mongodb.com/manual/tutorial/install-mongodb-on-os-x/
 
