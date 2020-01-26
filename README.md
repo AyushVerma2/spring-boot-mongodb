@@ -58,8 +58,27 @@ ps aux | grep -v grep | grep mongod
 To begin using MongoDB, connect a mongo shell to the running instance. From a new terminal, issue the following:
 mongo
 
-To chekc which bd is sued , open mongo terminal by typing mongo , and then >db .
-- to create new db suer <db_name>
+To check which db is used , open mongo terminal by typing mongo , and then 
+> db  - it will show which db
+> use userdb  - it will create userdb
+> show dbs . > show all the db, if db is not row it will bot be displayed
+> db.movie.insert({"name":"tutorials point"}) .  to insert
+** In MongoDB default database is test. If you didn't create any database, then collections will be stored in test database.
+db.dropDatabase() . : to drop the databse
+
+To create collection : createCollection() Method
+db.createCollection(name, options) ;// options is optinal
+  options can be capped,autoindex,size,max
+  
+ In MongoDB, you don't need to create collection. MongoDB creates collection automatically, when you insert some document.
+
+>db.tutorialspoint.insert({"name" : "tutorialspoint"})
+>show collections
+>db.COLLECTION_NAME.drop()
+Read: https://www.tutorialspoint.com/mongodb/mongodb_datatype.htm
+
+
+----
 Link:
 https://docs.mongodb.com/manual/tutorial/install-mongodb-on-os-x/
 
