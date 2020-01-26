@@ -2,10 +2,7 @@ package com.example.mongodb.springbootmongodb.resource;
 
 import com.example.mongodb.springbootmongodb.doc.Users;
 import com.example.mongodb.springbootmongodb.repo.UserRepository;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 import java.util.Optional;
@@ -29,5 +26,21 @@ public class UsersResource {
     @GetMapping("/{id}")
     public Optional<Users> get(@PathVariable  Integer id) {
         return userRepository.findById(id);
+    }
+
+    @PostMapping(path = "/addUser")
+    public void addUser(@RequestBody Users users) {
+        //code
+        userRepository.save(users);
+    }
+    @PutMapping(path = "/updateUser")
+    public void updateUser(@RequestBody Users users) {
+        //code
+        userRepository.save(users);
+    }
+    @DeleteMapping(path = "/deleteUser")
+    public void deleteUser(@RequestBody Users users) {
+        //code
+        userRepository.delete(users);
     }
 }
