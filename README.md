@@ -1,15 +1,14 @@
-# spring-boot-mongodb
+### spring-boot+spring-data+mongodb
 
 #### this is an example project , how to use spring boot ,with spring data and mongo db.
-```xml
 1. you need to install and run the mongo db
-    2. create a spring boot applicaiton to coneect. 
-    ```
-### this has sample esample to insert a record and use rest service to view.
+2. create a spring boot applicaiton to coneect. 
+    
+### This has sample esample to insert a record and use rest service to view.
 
-##### To view the record: http://localhost:8096/rest/users/all
+###### To view the record: http://localhost:8096/rest/users/all
 
-For insertion, i have used commandListner.
+#### To insert a record,I have used commandListner .
 eg:
 ```xml
 '@Bean
@@ -37,7 +36,7 @@ POM:
 			<artifactId>spring-boot-starter-test</artifactId>
 			<scope>test</scope>
 		</dependency>
-        ```xml
+        ```
 
 
    
