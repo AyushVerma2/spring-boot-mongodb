@@ -39,4 +39,28 @@ POM:
         ```
 
 
+I have used community verison of mongo db ,install on my Mac and started :
+to install . >  brew install mongodb-community@4.2
+to configure: 
+   >the configuration file (/usr/local/etc/mongod.conf)
+   > the log directory path (/usr/local/var/log/mongodb)
+  > the data directory path (/usr/local/var/mongodb)
+  
+ To run MongoDB (i.e. the mongod process) as a macOS service, issue the following:
+ brew services start mongodb-community@4.2
+ 
+ To run MongoDB manually as a background process, issue the following:
+mongod --config /usr/local/etc/mongod.conf --fork
+
+To verify that MongoDB is running, search for mongod in your running processes:
+ps aux | grep -v grep | grep mongod
+
+To begin using MongoDB, connect a mongo shell to the running instance. From a new terminal, issue the following:
+mongo
+
+Link:
+https://docs.mongodb.com/manual/tutorial/install-mongodb-on-os-x/
+
+
+
    
